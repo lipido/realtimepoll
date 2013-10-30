@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:300,400); 
+.chart{
+  float:left;
+  margin: 10px;
+}
+button, input[type="submit"]{
+  
+  
+   padding: 7px;
+   margin: 10px;
+   background: #00af64;
+   color: #fff;
+   font-size: 1.1em;
+   font-weight: bold;
+   line-height: 1.2em;
+   border: 1px dashed #fff;
+   border-radius: 0px;
+   box-shadow: 0 0 0 4px #00af64, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   
+   font-weight: normal;
+  
+}
+body{
+  font-family: 'Josefin Slab', serif;
+}
+input[type="text"], input[type="password"]{
+  border-left:0px;
+  border-top:0px;
+  border-right:0px;
+  border-bottom: 1px solid #0b61a4;
+  outline:none;
+  margin-bottom: 10px;
+}
+.delete{
+  background: #d9d9d9;
+  box-shadow: 0 0 0 4px #d9d9d9, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  color: #444;
+}
+.save{
+  background: #00af64;
+  box-shadow: 0 0 0 4px #00af64, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   
+}
+.new{
+  background: #DB9332;
+  box-shadow: 0 0 0 4px #DB9332, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   
+}
+ul{
+  list-style-type:none;
+}

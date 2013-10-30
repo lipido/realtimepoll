@@ -1,0 +1,29 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script src="js/lib/Chart.min.js"></script>
+<script src="js/lib/angles.js"></script>
+<script type="text/javascript" src="dpd.js"></script>
+<script src="js/stats.js"></script>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div ng-app="stats">
+  <h1>Poll stats</h1>
+  <div ng-controller="StatsCtrl">
+      
+      <ul class="unstyled">
+      
+
+      <div ng-repeat="chart in charts"  class="chart" >
+	<h2>{{chart.question.question}}</h2>
+	<canvas id="{{chart.question.question}}" options="chart.options" barchart data="chart"></canvas>
+      </div>
+      </li>
+      
+    </ul>
+    
+  </div>
+</div>
+</body>
+</html>

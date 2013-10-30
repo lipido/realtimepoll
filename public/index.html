@@ -1,0 +1,35 @@
+<html ng-app>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script type="text/javascript" src="dpd.js"></script>
+<script src="js/questions.js"></script>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div ng-app>
+<div id="navbar">
+<a href="questions-stats.html">Stats</a>
+<a href="questions-admin.html">Admin</a>
+</div>
+  <h1>Poll</h1>
+  <div ng-controller="QuestionsCtrl">
+    
+    
+    <ul class="unstyled">
+      <div ng-show="loaded == false">Loading...</div>
+      <div ng-repeat="question in questions" ng-show="loaded">
+        <h2>{{question.question}}</h2>
+      <ol class="unstyled">
+	<li ng-repeat="answer in question.answers">
+	  {{answer.answer}}	  
+	  <button type="button" ng-click="vote(question,answer)" >Vote</button>
+	  (Votes: {{answer.votes}})
+	</li>
+      </ol>
+      </div>
+    </ul>
+    
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  <script type="text/javascript" src="dpd.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/login.js"></script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div ng-app>
+  <div ng-controller="LoginCtrl"> <!-- we declare the controller outside the inclusion of login controller component in order to also see the currentLogin var -->
+    
+      
+	<h2>Poll Admin</h2>
+	<div ng-include="'login.html'"></div>
+	<div ng-show="currentLogin != null">
+	<h3>Edit questionary</h3>
+	<div ng-controller="QuestionsCtrl">
+	
+	  <ul class="unstyled">
+	    <div ng-show="loaded == false">Loading...</div>
+	    <button ng-click="newQuestion()" class="new">New Question!</button>
+	    <li ng-repeat="question in questions" ng-show="loaded">
+	      <label>Question: </label><input type="text" ng-model="question.question" size="40"/>
+	      <button ng-click="newAnswer(question)" class="new">Add answer</button>
+	      <ol class="unstyled">
+		  <li ng-repeat="answer in question.answers">
+		    <label>Answer: <input type="text" ng-model="answer.answer"/><button ng-click="deleteAnswer(question,answer)" class="delete">Delete answer</button> (current votes: {{answer.votes}})
+		  </li>
+		  
+		</ol>
+	
+		<button ng-click="saveQuestion(question)" class="save">Save Question</button>
+		<button ng-click="deleteQuestion(question)" class="delete">Delete Question</button>
+		
+	    </li>
+	    
+	    <button ng-click="newQuestion()" class="new" ng-show="questions.length > 0">New Question!</button>
+	  </ul>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script type="text/javascript" src="dpd.js"></script>
+<script src="js/login.js"></script>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div ng-app>
+  
+  <div>
+    <div ng-show="currentLogin != null">
+    Welcome {{currentLogin.username}}!
+<button ng-click="doLogout()">Logout</button>
+    </div>
+    
+    <form ng-submit="doLogin()" ng-show="currentLogin == null">
+    <label>Login:</label> <input type="text" ng-model="user.username"/><br>
+    <label>Password:</label><input type="password" ng-model="user.password"/><br>
+    <input type="submit" value="login"/>
+    </form>
+    
+    
+  </div>
+</div>
+</body>
+</html>
