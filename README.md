@@ -1,7 +1,9 @@
 realtimepoll
 ============
 
-A simple web real-time polling component. This is an incomplete project.
+A simple web real-time polling component. It is based on a backend powered by [deployd](http://deployd.com) (which wraps [MongoDB](http://www.mongodb.org) and [nodejs](http://nodejs.org)), and a front-end powered by [AngularJS](http://angularjs.org) and [angles](https://github.com/lgsilver/angles)(a angular.js wrapper for [Chartjs](http://www.chartjs.org))
+
+WARNING: This is an incomplete project.
 
 ## Things to be done
 - Ensure that each user only votes once. Maybe by email validation
