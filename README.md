@@ -25,7 +25,7 @@ Launch the deployd dashboard
 
 	dpd> dashboard
 
-You need to add an admin user manually, by going to the Menu on the left Users->Data and inserting a row with the login, password, true (the true means "is admin")
+You need to add an admin user manually, by going to the Menu on the left Users->Data and insert a row with the login, password, true (the true means "is admin")
 
 Deployd should be running and listening on port 2403, so you can go to (http://localhost:2403) to see the app. The main page is for voting. There you will find two links for administrator (login needed) and for statistics.
 
