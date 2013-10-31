@@ -11,13 +11,16 @@ A simple web real-time polling component. This is an incomplete project.
 You need [nodejs](http://nodejs.org) (version 0.8).
 
 The easiest way is to install [deployd](http://deployd.com) by:
+
 	npm install deployd -d
 
 ## Running
 Download the project, go to the directory and run:
+
 	dpd
 
 Launch the deployd dashboard
+
 	dpd> dashboard
 
 You need to add an admin user manually, by going to the Menu on the left Users->Data and inserting a row with the login, password, true (the true means "is admin")
